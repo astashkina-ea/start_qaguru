@@ -9,6 +9,7 @@ public class LoginTests {
 
     @Test
     void successLoginTest() {
+        Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true; // чтобы не закрывался браузер
 //        Configuration.browser = "firefox";
 //        Configuration.browserSize = "100x100";
@@ -29,6 +30,7 @@ public class LoginTests {
 
     @Test
     void negativeLoginTest() {
+        Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true; // чтобы не закрывался браузер
         open("https://qa.guru/cms/system/login");
         $("[name=email]").setValue("qagurubot@gmail.com");
